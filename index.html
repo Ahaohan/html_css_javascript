@@ -1,0 +1,162 @@
+<!--!+Tab/Enter -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页1</title>
+</head>
+
+<body>
+
+    <nav>
+        <!-- /，根目录；./，当前目录下；../ 上级目录 -->
+        <a href="./index.html">首页</a>
+        <a href="../about_me.html">关于我们</a>
+        <a href="/login">登录</a>
+        <img src="/Downloads/5ee5a00561704069becae72ff65cc279.png" alt="图片加载失败。。。" height="20px">
+
+        <hr>
+    </nav>
+    <header>
+        头部信息<br>
+        <a href="https://www.bilibili.com/video/BV16J411j7gz">详细视频教程：【晓舟报告】从零开始学前端-网页重构</a>
+        <hr>
+    </header>
+    <aside>
+        侧边栏
+    </aside>
+    <main>
+        <section>
+            <article>这是一篇博客</article>
+            <p><b>这是一篇博客</b>这是一篇博客</p><b>这是一篇博客</b>
+            <p>这是一篇博客</p>
+
+        </section>
+        <section>
+            <!-- 标题标签，h1~h6 -->
+            <h1>hello world</h1>
+            <h2>hello world</h2>
+            <h3>hello world</h3>
+            <h4>hello world</h4>
+            <h5>hello world</h5>
+            <h6>hello world</h6>
+            <h7>hello world</h7>
+            <!-- 无h7 -->
+            <!-- Ctrl+/ 行注释，Ctrl+Shift+/ 选中注释 -->
+
+            <p>hello world</p>
+            <!-- 无序列表ul，有序列表ol -->
+            <ul>
+                <li>香蕉</li>
+                <li>苹果</li>
+                <li>鸭梨</li>
+            </ul>
+            <ol>
+                <li>香蕉</li>
+                <li>苹果</li>
+                <li>鸭梨</li>
+            </ol>
+
+            <!-- table：表格元素的容器，属性border规定表格边框的宽度；
+                thead：表头，th：定义表头单元格，tbody：表格主体，
+                tr：行，td：单元格 -->
+            <table border="1">
+                <thead>
+                    <th>序号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>小红</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>小明</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>小亮</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <!-- 属性colspan跨行显示 -->
+            <table border="1">
+                <tr>
+                    <td colspan="4" align="center">学生列表</td>
+                </tr>
+                <tr>
+                    <!-- 属性rowspan跨列显示 -->
+                    <td rowspan="3">1班</td>
+                    <td>1</td>
+                    <td>小红</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>小明</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>小亮</td>
+                    <td>5</td>
+                </tr>
+            </table>
+            <a href="https://www.w3school.com.cn/tiy/t.asp?f=eg_html_table_span">更多测试。。。</a><br><br>
+
+            <!-- form：表单容器，属性action：规定当提交表单时向何处发送表单数据（向后台提交数据） -->
+            <!-- <label> 标签为 input 元素定义标注（标记）。
+                label 元素不会向用户呈现任何特殊效果。不过，它为鼠标用户改进了可用性。如果您在 label 元素内点击文本，就会触发此控件。
+                就是说，当用户选择该标签时，浏览器就会自动将焦点转到和标签相关的表单控件上。
+                <label> 标签的 for 属性应当与相关元素的 id 属性相同。 -->
+            <form action="">
+                <label for="username">用户名</label>
+                <input id="username" type="text" placeholder="用户名">
+                <label for="password">密码</label>
+                <input id="password" type="password" placeholder="密码">
+                <select name="" id="">
+                    <option value="">男</option>
+                    <option value="">女</option>
+                </select>
+
+                <!-- radio单选框，name="sex"时，触发单选 -->
+                <input name="sex" type="radio" id="male"><label for="male">男</label>
+                <input name="sex" type="radio" id="female"><label for="female">女</label>
+                <!-- <input name="sex" type="radio"><label for="">保密</label> -->
+
+
+                <!-- checkbox复选框 -->
+                <input type="checkbox">
+                <input type="checkbox">
+
+                <!-- input的两个button，submit可以向后台提交数据，button的功能需要另外设计 -->
+                <input type="submit" value="登录">
+                <input type="button" value="按钮">
+                <br><a href="https://www.w3school.com.cn/tags/tag_input.asp">查看更多input标签属性和功能。。。</a>
+            </form>
+
+
+        </section>
+        <section>
+            <h3>公司业务</h3>
+            <div>
+                <div>网站开发</div>
+                <div>软件开发</div>
+                <div>App开发</div>
+            </div>
+        </section>
+    </main>
+    <hr>
+    <footer>底部信息</footer>
+</body>
+
+</html>
