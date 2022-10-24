@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 引入CSS的方法：嵌入、内联（行内）、外部（实际开发中大部分都使用外部样式） -->
+    <!-- 内联权重要高于嵌入样式，过多的内联样式不便维护，尽量不要用 -->
+    <!-- 嵌入样式 -->
+    <!-- 选择器：元素选择器、类选择器、id选择器、通配符选择器，
+            层级选择器、组合选择器、伪类选择器（增加行为）、伪元素选择器（增加元素）...
+            详细用法查看：https://www.w3school.com.cn/cssref/css_selectors.asp -->
+
+    <!-- 元素选择器 -->
+    <!-- <style>
+            h1 {
+                /* 字体颜色 */
+                color: red;
+                /* 字体大小：px是像素单位 */
+                font-size: 12px
+            }
+        </style>
+        <style>
+            img {
+                width: 300px;
+                height: 200px;
+            }
+        </style> -->
+
+    <!-- 类选择器 -->
+    <style>
+        .test1 {
+            color: red;
+        }
+        
+        .test2 {
+            /* Chrome浏览器中font-size最小值是12px，低于12px只改变行高，字体大小不变 */
+            font-size: 12px;
+            color: white;
+            background-color: black;
+            /* 文本水平居中 */
+            text-align: center;
+            line-height: 100px;
+        }
+        
+        .img1 {
+            width: 500px;
+            /* height: 200px; */
+            /* 为防止图片拉伸，可只设置width，不设置height，或将height设置成auto */
+        }
+    </style>
+
+    <!-- id选择器 -->
+    <style>
+        #test1 {
+            color: red;
+        }
+    </style>
+    <!-- 可以不用id选择器，只用类选择器 -->
+
+    <!-- 通配符选择器（找到所有元素） -->
+    <!-- <style>
+            *{
+                color: red;
+            }
+        </style> -->
+
+    <style>
+        /* 层级选择器 */
+        /* .box1 h1 {
+                color: yellow;
+            } */
+        /* 层级+组合选择器 */
+        
+        .box1 h1,
+        .box1 h2 {
+            color: green;
+        }
+        /* 组合选择器 */
+        /* h1,
+            h2 {
+                color: blue;
+            } */
+        /* 伪类选择器 */
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        /* hover:鼠标悬浮时指定的样式 */
+        
+        .box:hover {
+            background-color: blue;
+        }
+        
+        .btn:hover {
+            background-color: blanchedalmond;
+        }
+        /* 伪元素选择器 */
+        /* CSS2中伪类选择器和伪元素选择器都是一个冒号，CSS3让伪元素选择器增加了一个冒号 */
+        /* 为元素增加内容并设置内容的样式 */
+        
+        .line::before,
+        .line::after {
+            content: "-----";
+            color: red;
+        }
+    </style>
+
+    <!-- 选择器权重
+        相同选择器：后面的会覆盖前面的
+        不同选择器：ID(100)>CLASS(10)>element(1)
+        层级选择器：按权重累加计算 -->
+    <style>
+        /* .title {
+            color: red;
+        } */
+        /* #txt {
+            color: blue;
+        } */
+        /* h1 {
+            color: green;
+        } */
+        /* .title2 {
+            color: blueviolet;
+        } */
+        /* !important 设置最高权重 */
+        /* 10+1=11 */
+        /* .box3 h1 {
+            color: aqua !important;
+        } */
+        /* 10+100=110 */
+        
+        .box3 #txt {
+            color: aquamarine;
+        }
+        /* 100+1=101 */
+        
+        #box h1 {
+            color: bisque;
+        }
+    </style>
+
+    <!-- 外部样式 -->
+    <link rel="stylesheet" href="style/demo01.css">
+
+    <!-- 常用的CSS属性：字体大小font-size，字体颜色color，宽度width，高度height，背景色background-color，
+        文本水平居中text-align，文本行高（垂直居中）line-height，
+        查看更多CSS属性，使用方法：https://www.w3school.com.cn/css/css_shiyong.asp -->
+
+</head>
+
+<body>
+
+    <p class="test1">这是一篇博客</p>
+    <p id="test1">这是一篇博客</p>
+    <h1 class="test2">Hello world</h1>
+    <img class="img1" src="1.jpg" alt="">
+
+    <div class="box1">
+        <h1>Hello h1</h1>
+        <h2>Hello h2</h2>
+    </div>
+    <div class="box2">
+        <h1 class="line">Hello world</h1>
+        <h2 class="line">Hello world</h2>
+    </div>
+
+    <div class="box"></div>
+
+    <input class="btn" type="button" value="按钮">
+
+    <div class="box3" id="box">
+        <!-- 给h1标签添加多个类名，并内联样式，试比权重 -->
+        <h1 class="title title2" id="txt" style="color: brown;">hello world</h1>
+    </div>
+    <h1 class="link">hello world</h1>
+
+</body>
+
+</html>
