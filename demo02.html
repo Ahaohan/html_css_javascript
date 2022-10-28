@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo02</title>
+
+    <!-- 盒子模型的CSS属性：
+        边框：border(-width/-style/-color)（详看：https://www.w3school.com.cn/cssref/pr_border.asp）；
+        外边距：margin(-top/-right/-bottom/-left)（详看：https://www.w3school.com.cn/cssref/pr_margin.asp）；
+        内边距：padding(-top/-right/-bottom/-left)（详看：https://www.w3school.com.cn/cssref/pr_padding.asp）
+     -->
+    <!-- 默认情况：元素宽度和高度计算
+        元素的实际宽度 = border-left + border-right + width + padding-left + padding-right
+        元素的实际高度 = border-top + border-bottom + height + padding-top + padding-bottom
+        设置padding会改变盒子的大小
+    -->
+    <!-- 设置box-sizing:border-box
+        元素的实际宽度 = width
+        元素的实际高度 = height -->
+    <style>
+        * {
+            /* 元素边距初始化（清除默认的元素边距样式），px可不写 */
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            /* border-width: 10px;
+            border-style: solid;
+            border-color: red; */
+            border: 10px solid red;
+            /* margin: 100px 0 0 200px; */
+            /* 顺序：上 右 下 左 */
+            /* margin: 100px 50px; */
+            /* 上下100 右左50 */
+            /* margin: 100px 500px 200px; */
+            /* 上100 右左500 下200 */
+            margin: 0px;
+            /* 上右下左都是0 */
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: 800px;
+            height: 300px;
+            border: 1px solid red;
+            /* margin: 0 200px; */
+            /* 上下0 右左200 */
+            margin: 0 auto;
+            /* 上下0 右左（自动）居中 */
+        }
+        /* .fruits {
+            border: 1px solid red;
+            width: 800px;
+            margin: 0 auto;
+            padding-left: 30px;
+            padding-top: 20px;
+            box-sizing: border-box;
+        }
+        
+        .sports {
+            border: 1px solid blue;
+            width: 800px;
+            margin: 0 auto;
+            margin-top: 50px;
+            padding-left: 30px;
+            padding-top: 20px;
+            box-sizing: border-box;
+        } */
+        
+        .fruits,
+        .sports {
+            width: 800px;
+            margin: 50px auto 0;
+            padding: 20px 0 0 30px;
+            box-sizing: border-box;
+        }
+        
+        .fruits {
+            border: 1px solid red;
+        }
+        
+        .sports {
+            border: 1px solid blue;
+        }
+        
+        .fruits ul,
+        .sports ul {
+            list-style: inside;
+            /* 列表样式在边距之内 */
+            /* list-style: none; */
+            /* 取消列表样式 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <a href="">test</a>
+    </div>
+    <div class="container"></div>
+    <div class="fruits">
+        <h3>水果列表</h3>
+        <ul>
+            <li>香蕉</li>
+            <li>苹果</li>
+            <li>鸭梨</li>
+        </ul>
+    </div>
+    <div class="sports">
+        <h3>运动列表</h3>
+        <ul>
+            <li>篮球</li>
+            <li>足球</li>
+            <li>羽毛球</li>
+        </ul>
+    </div>
+</body>
+
+</html>
