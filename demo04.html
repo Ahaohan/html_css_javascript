@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo04</title>
+
+    <!-- CSS布局
+        查看文档：https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Introduction
+     -->
+
+    <!-- 浮动布局 -->
+    <!-- 特性：脱离文档流
+        清除浮动的方法：空div、伪元素，clear:both属性
+    -->
+    <style>
+        /* 用伪元素清除浮动 */
+        
+        .clear::before,
+        .clear::after {
+            /* content: "123"; */
+            content: "";
+            /* 将伪元素before、after转换为块元素 */
+            display: block;
+            clear: both
+        }
+        /*
+    </style>
+    <style>
+        */ .content {
+            width: 300px;
+            height: 200px;
+            border: 1px solid red;
+            /* 设置元素浮动，通常设置左浮动 */
+            float: left;
+        }
+        
+        .aside {
+            width: 100px;
+            height: 200px;
+            border: 1px solid blue;
+            /* 需将两个都设置成浮动元素，才能在一行显示 */
+            float: left;
+        }
+        
+        .box1 {
+            width: 400px;
+            height: 400px;
+            background-color: green;
+        }
+        
+        .box2 {
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+        }
+        
+        .box3 {
+            width: 400px;
+            height: 400px;
+            background-color: green;
+        }
+        
+        .box {
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+        }
+        /* 用空div清除浮动 */
+        /* .clear {
+            clear: both;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <!-- 用伪元素清除浮动-->
+    <div class="container clear">
+        <div class="content">
+            内容
+        </div>
+        <div class="aside">
+            边栏
+        </div>
+    </div>
+    <div class="clear">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+
+
+    <!-- 用空div清除浮动 -->
+    <!-- <div class="clear"></div> -->
+
+    <div class="box"></div>
+</body>
+
+</html>
