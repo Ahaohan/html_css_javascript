@@ -26,14 +26,13 @@
             display: block;
             clear: both
         }
-        /*
     </style>
     <style>
-        */ .content {
+        .content {
             width: 300px;
             height: 200px;
             border: 1px solid red;
-            /* 设置元素浮动，通常设置左浮动 */
+            /* 给内容设置元素浮动，通常设置左浮动 */
             float: left;
         }
         
@@ -41,7 +40,7 @@
             width: 100px;
             height: 200px;
             border: 1px solid blue;
-            /* 需将两个都设置成浮动元素，才能在一行显示 */
+            /* 需将两个（内容和边栏）都设置成浮动元素，才能在一行显示 */
             float: left;
         }
         
@@ -77,6 +76,17 @@
 
 <body>
 
+    <!-- 用空div清除浮动 -->
+    <!-- <div class="content">
+        内容
+    </div>
+    <div class="aside">
+        边栏
+    </div>
+    
+    <div class="clear"></div> -->
+
+
     <!-- 用伪元素清除浮动-->
     <div class="container clear">
         <div class="content">
@@ -86,15 +96,13 @@
             边栏
         </div>
     </div>
-    <div class="clear">
+    <!-- 重复使用伪元素清除浮动-->
+    <!-- <div class="clear">
         <div class="box1"></div>
         <div class="box2"></div>
         <div class="box3"></div>
-    </div>
+    </div> -->
 
-
-    <!-- 用空div清除浮动 -->
-    <!-- <div class="clear"></div> -->
 
     <div class="box"></div>
 </body>
