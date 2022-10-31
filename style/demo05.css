@@ -1,0 +1,57 @@
+/* 清除默认样式 */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* 清除浮动 */
+
+.clear::before,
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* 层级选择器找到img标签 */
+
+.list .pic img {
+    width: 200px;
+    height: 150px;
+}
+
+
+/* 设置浮动 */
+
+.pic {
+    width: 200px;
+    float: left;
+    margin: 10px 0 0 10px;
+    /* 上 右 下 左 */
+}
+
+.title {
+    width: 300px;
+    float: left;
+    margin: 10px 0 0 10px;
+}
+
+.title a {
+    display: block;
+    /* a标签转换为块元素 */
+    width: 80px;
+    height: 30px;
+    margin: 50px 0 0 20px;
+    background-color: rgb(190, 221, 248);
+    color: black;
+    /* 文字颜色 */
+    text-decoration: none;
+    /* 取消文字下划线 */
+    line-height: 30px;
+    /* 垂直居中 */
+    text-align: center;
+    /* 水平居中 */
+}
