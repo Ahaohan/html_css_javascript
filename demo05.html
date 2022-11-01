@@ -7,33 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo05</title>
     <link rel="stylesheet" href="style/demo05.css">
+
+
+    <!-- 树状结构：
+        节点之间的关系：根节点、父级节点、子级节点、同级节点（没有相同的父级不是同级）；
+        HTML文件树状结构的节点：元素、属性、文本 -->
 </head>
 
 <body>
 
-    <ul class="list">
-        <li class="clear">
-            <div class="pic">
-                <img src="1.jpg" alt="">
-            </div>
-            <div class="title">
-                <h3>前端开发学习手册</h3>
-                <p>2022年10月31日19:53:04</p>
-                <a href="">阅读</a>
-            </div>
-        </li>
-        <li class="clear">
-            <div class="pic">
-                <img src="1.jpg" alt="">
-            </div>
-            <div class="title">
-                <h3>前端开发学习手册</h3>
-                <p>2022年10月31日19:53:04</p>
-                <a href="">阅读</a>
-            </div>
-        </li>
-    </ul>
-
+    <div class="head">
+        <h2>
+            精选手册
+            <a href="">查看更多></a>
+        </h2>
+    </div>
+    <div class="list">
+        <ul>
+            <li class="clear">
+                <div class="pic">
+                    <img src="1.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h3>前端开发学习手册</h3>
+                    <p>2022年10月31日19:53:04</p>
+                    <a href="">阅读</a>
+                </div>
+            </li>
+            <li class="clear">
+                <div class="pic">
+                    <img src="1.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h3>前端开发学习手册</h3>
+                    <p>2022年10月31日19:53:04</p>
+                    <a href="">阅读</a>
+                </div>
+            </li>
+        </ul>
+    </div>
 </body>
 
 </html>
