@@ -5,6 +5,26 @@
     padding: 0px;
 }
 
+.head {
+    width: 800px;
+    height: 30px;
+    /* border: 1px solid red; */
+}
+
+.head h2 {
+    font-size: 16px;
+    line-height: 30px;
+    margin-left: 10px;
+}
+
+.head h2 a {
+    color: #aaa;
+    float: right;
+    font-size: 12px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
 
 /* 清除浮动 */
 
