@@ -8,13 +8,47 @@
     <title>Demo06</title>
 
     <!-- CSS定位
-        绝对定位（absolute）、相对定位（relative）、固定定位（fixed） -->
-    <!-- 坐标属性（非定位元素不起作用）
-        top，left，right，bottom，，z-index -->
+        绝对定位（absolute）：脱离文档流，默认参照物为浏览器视窗的左上角；
+        相对定位（relative）：不脱离文档流，默认参照物为此元素原位置
+        固定定位（fixed）：脱离文档流，默认参照物为浏览器视窗位置
+     -->
+    <!-- 坐标属性（只对定位元素起作用，非定位元素不起作用）
+        top，left，right，bottom，z-index（控制Z轴，当两个元素重叠时，谁显示在上面或下面；值为整数，数值大则在前方显示；默认为0，负值则在默认值下面） -->
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid #fff;
+        }
+        
+        .pos {
+            /* 绝对定位 */
+            /* position: absolute; */
+            /* 相对定位 */
+            /* position: relative; */
+            /* 固定定位 */
+            position: fixed;
+            top: 50px;
+            left: 80px;
+            z-index: 999;
+        }
+        
+        .pos_ab {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: -1;
+        }
+    </style>
 
 </head>
 
 <body>
+
+    <div class="box">1</div>
+    <div class="box pos">2</div>
+    <div class="box pos_ab">3</div>
 
 </body>
 
