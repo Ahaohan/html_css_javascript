@@ -11,7 +11,9 @@
         绝对定位（absolute）：脱离文档流，默认参照物为浏览器视窗的左上角；
         相对定位（relative）：不脱离文档流，默认参照物为此元素原位置
         固定定位（fixed）：脱离文档流，默认参照物为浏览器视窗位置
+        设置参照物：父级为定位元素，子级的绝对定位元素会以父级为参照物
      -->
+    <!-- 更多查看：https://www.w3school.com.cn/css/css_positioning.asp -->
     <!-- 坐标属性（只对定位元素起作用，非定位元素不起作用）
         top，left，right，bottom，z-index（控制Z轴，当两个元素重叠时，谁显示在上面或下面；值为整数，数值大则在前方显示；默认为0，负值则在默认值下面） -->
     <style>
@@ -41,15 +43,38 @@
             z-index: -1;
         }
         
-        .pix_box {
+        .pic_box {
             width: 500px;
             margin: 50px auto;
             /* 外边距   上下50 水平居中 */
+            position: relative;
+            /* position: absolute; */
+            /* left: 100px;
+            top: 200px; */
         }
         
-        .pix_box img {
+        .pic_box img {
             width: 500px;
             height: auto;
+        }
+        
+        .list {
+            position: absolute;
+            /* ul子级的绝对定位元素以父级div为参照物 */
+            top: 10px;
+            left: 400px;
+        }
+        
+        body {
+            height: 2000px;
+        }
+        
+        .pos_top {
+            position: fixed;
+            bottom: 100px;
+            right: 100px;
+            /* top: 500px;
+            left: 500px; */
         }
     </style>
 
@@ -61,7 +86,7 @@
     <div class="box pos">2</div>
     <div class="box pos_ab">3</div>
 
-    <div class="pix_box">
+    <div class="pic_box">
         <img src="1.jpg" alt="">
         <ul class="list">
             <li>1</li>
@@ -70,6 +95,8 @@
         </ul>
     </div>
 
+    <button class="pos_top"><a href="#">返回顶部</button>
+    <!-- #：超链接指向页面中的锚 -->
 </body>
 
 </html>
