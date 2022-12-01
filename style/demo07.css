@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 60px;
+    /* background-color: #00f; */
+}
+
+.header .header_content {
+    width: 1260px;
+    /* background-color: #f0f; */
+    margin: 0 auto;
+    height: 100%;
+    /* 高度与父级相同 */
+}
+
+.header .header_content .logo {
+    margin-top: 16px;
+    float: left;
+}
+
+.header .header_content .nav li {
+    list-style: none;
+    /* 取消列表样式（圆点） */
+    float: left;
+    width: 114px;
+    height: 60px;
+    /* 此处高度设置为100%，会导致下面设置的怪异盒模型失效（只第一个li失效） */
+    line-height: 60px;
+    /* 垂直居中 */
+    text-align: center;
+    /* 水平居中 */
+}
+
+.header .header_content .nav li a {
+    color: #000;
+    text-decoration: none;
+    /* 取消下划线 */
+}
+
+.header .header_content .nav .active {
+    border-bottom: 2px solid #0084ff;
+    /* 设置下边框：宽度实线 颜色 */
+    box-sizing: border-box;
+    /* 设置怪异盒模型，不占据外部内容位置 */
+}
+
+.header .header_content .nav li:hover {
+    border-bottom: 2px solid #0084ff;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1260px;
+    background-color: #0f0;
+    margin: 0 auto;
+    /* 设置居中 */
+}
+
+.container .content {
+    float: left;
+    width: 960px;
+    /* background-color: #0ff; */
+}
+
+.container .slider {
+    float: right;
+    /* background-color: #f00; */
+    width: 290px;
+}
